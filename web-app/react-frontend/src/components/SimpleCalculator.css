@@ -1,0 +1,179 @@
+/* SimpleCalculator Component Styles */
+
+/* Ensure smooth scrolling for the entire calculator */
+.simple-calculator-wrapper {
+  scroll-behavior: smooth;
+  background: transparent !important;
+  padding-top: 0 !important;
+}
+
+/* Remove duplicate background when integrated in formula page */
+.formulas .simple-calculator-wrapper {
+  background: transparent !important;
+  min-height: auto;
+}
+
+/* Adjust calculator header when in formula page */
+.formulas .simple-calculator-wrapper .max-w-7xl {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Make calculator title blend with formula page */
+.formulas .simple-calculator-wrapper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Fix for small screens - prevent horizontal overflow */
+@media (max-width: 640px) {
+  .simple-calculator-wrapper {
+    overflow-x: hidden;
+  }
+  
+  /* Ensure cards don't overflow on mobile */
+  .formula-card-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Improve card readability on small screens */
+@media (max-width: 768px) {
+  /* Reduce card padding on mobile */
+  [class*="CardContent"] {
+    padding: 1rem !important;
+  }
+  
+  /* Make input fields more touch-friendly */
+  input[type="number"],
+  input[type="text"] {
+    min-height: 44px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Improve button spacing */
+  button {
+    min-height: 44px;
+  }
+}
+
+/* Fix for formula text overflow */
+.formula-display-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Ensure results section is readable */
+.results-section {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Improve contrast for better readability */
+.bg-black\/60 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Fix for tab labels wrapping */
+.tab-label-grid {
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .tab-label-grid {
+    font-size: 0.7rem;
+  }
+}
+
+/* Ensure proper spacing between form elements */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Fix for checkbox alignment */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Improve card header gradient visibility */
+.card-header-gradient {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+}
+
+/* Fix for result text overflow */
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Improve pulse animation performance */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Fix for long calculation values */
+.calculation-value {
+  font-family: 'JetBrains Mono', monospace;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+/* Ensure proper spacing in tab panels */
+.tab-content {
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .tab-content {
+    padding: 0;
+  }
+}
+
+/* Fix for label text overflow */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+/* Improve focus states for accessibility */
+input:focus,
+button:focus,
+[role="tab"]:focus {
+  outline: 2px solid rgba(102, 126, 234, 0.5);
+  outline-offset: 2px;
+}
+
+/* Fix for gradient text rendering */
+.gradient-text-fix {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

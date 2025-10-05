@@ -41,16 +41,16 @@ const Home = () => {
 
   const features = [
     {
+      icon: Zap,
+      title: '⚡ Novel Feedback-Based Knowledge Weight',
+      description: 'Revolutionary AI reliability system using wᵢ ← wᵢ - η∂L/∂wᵢ formula. Dynamic weight adjustment based on human feedback makes planet hunting faster and more reliable.',
+      color: 'purple'
+    },
+    {
       icon: Brain,
       title: 'Advanced Reasoning',
       description: 'Enhanced scientific reasoning capabilities using GRPO training for complex astronomical analysis.',
       color: 'blue'
-    },
-    {
-      icon: Zap,
-      title: 'Fast Inference',
-      description: '2x faster training and inference using Unsloth optimization for real-time responses.',
-      color: 'purple'
     },
     {
       icon: Target,

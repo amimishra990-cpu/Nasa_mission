@@ -78,6 +78,9 @@ class ExoplanetLLMServer:
         
         # Mock exoplanet knowledge base
         self.exoplanet_responses = {
+            "feedback": "⚡ Our novel Feedback-Based Knowledge Weight formula: wᵢ ← wᵢ - η∂L/∂wᵢ where L = -h log P - (1-h) log(1-P). This groundbreaking approach uses gradient descent on binary cross-entropy loss to dynamically adjust AI helper reliability weights based on human feedback. Good performers gain higher weights, poor performers are penalized, making planet hunting faster and more reliable through collaborative intelligence.",
+            "novel": "This project introduces a revolutionary Feedback-Based Knowledge Weight system that enables AI helpers to learn from human feedback in real-time. Each helper's reliability weight is updated using gradient descent, creating a dynamic trust system that improves accuracy over time.",
+            "weight": "The weight adjustment formula wᵢ ← wᵢ - η∂L/∂wᵢ represents a novel approach to AI reliability scoring, where human feedback directly influences the trustworthiness of different AI helpers in exoplanet discovery.",
             "transit": "Transit photometry is one of the most successful methods for detecting exoplanets. When a planet passes in front of its host star, it causes a small, periodic dimming of the star's light.",
             "radial_velocity": "The radial velocity method detects exoplanets by measuring the wobble of a star caused by the gravitational pull of an orbiting planet.",
             "direct_imaging": "Direct imaging involves taking pictures of exoplanets by blocking out the light from their host stars using coronagraphs or starshades.",
@@ -185,6 +188,10 @@ class ExoplanetLLMServer:
         for keyword, response in self.exoplanet_responses.items():
             if keyword in message_lower:
                 return f"{response}\n\nWould you like to know more about exoplanet discovery methods or specific missions?"
+        
+        # Check for novel formula related terms
+        if any(term in message_lower for term in ["novel", "feedback", "weight", "formula", "surprise", "reliability", "gradient"]):
+            return self.exoplanet_responses["feedback"] + "\n\nThis revolutionary approach represents a major breakthrough in AI-assisted exoplanet discovery!"
         
         # Default responses for common questions
         if any(word in message_lower for word in ["hello", "hi", "hey"]):

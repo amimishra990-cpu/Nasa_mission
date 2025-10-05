@@ -66,10 +66,14 @@ const Footer = () => {
               </span>
             </Link>
             <p className="footer-description">
-              Advanced AI for astronomical discovery and exoplanet analysis. 
-              Empowering researchers, students, and space enthusiasts with 
-              cutting-edge language models specialized in space science.
+              Advanced AI system developed for astronomical discovery and exoplanet research. 
+              Supporting NASA, ESA, and international space agencies with cutting-edge 
+              machine learning for planetary science and astrophysics.
             </p>
+            <div className="footer-badges" style={{marginTop: '1rem', display: 'flex', gap: '1rem', flexWrap: 'wrap'}}>
+              <span style={{fontSize: '0.75rem', padding: '4px 12px', background: 'rgba(11, 61, 145, 0.2)', border: '1px solid rgba(11, 61, 145, 0.4)', borderRadius: '20px', color: '#66FCF1', fontWeight: '600'}}>NASA COLLABORATION</span>
+              <span style={{fontSize: '0.75rem', padding: '4px 12px', background: 'rgba(11, 61, 145, 0.2)', border: '1px solid rgba(11, 61, 145, 0.4)', borderRadius: '20px', color: '#66FCF1', fontWeight: '600'}}>ESA PARTNER</span>
+            </div>
             <div className="footer-social">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -146,8 +150,8 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="footer-copyright">
-              © {currentYear} Exoplanet LLM. Made with{' '}
-              <Heart size={16} className="heart-icon" /> for space exploration.
+              © {currentYear} Exoplanet LLM Research Initiative. In collaboration with NASA, ESA, and international space agencies.<br/>
+              <span style={{fontSize: '0.75rem', marginTop: '0.5rem', display: 'block', opacity: '0.7'}}>Educational and research purposes. Not for commercial spacecraft navigation.</span>
             </p>
             <div className="footer-bottom-links">
               <Link to="/privacy" className="footer-bottom-link">

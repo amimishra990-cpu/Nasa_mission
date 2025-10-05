@@ -3,8 +3,9 @@ services:
   - type: web
     name: nasa-exoplanet-api
     env: python
-    buildCommand: "cd web-app/llm-backend && pip install -r requirements-production.txt"
-    startCommand: "cd web-app/llm-backend && python production_server.py"
+    rootDir: web-app/llm-backend
+    buildCommand: "pip install -r requirements-production.txt"
+    startCommand: "python production_server.py"
     plan: starter
     envVars:
       - key: PORT
@@ -17,15 +18,16 @@ services:
   # Frontend Static Site
   - type: static
     name: nasa-exoplanet-frontend
-    buildCommand: "cd web-app/react-frontend && npm ci && npm run build"
-    staticPublishPath: web-app/react-frontend/build
+    rootDir: web-app/react-frontend
+    buildCommand: "npm ci && npm run build"
+    staticPublishPath: build
     plan: starter
     envVars:
       - key: REACT_APP_API_URL
         fromService:
           type: web
           name: nasa-exoplanet-api
-          property: host
+          property: url
       - key: REACT_APP_ENVIRONMENT
         value: production
       - key: REACT_APP_SUPABASE_URL

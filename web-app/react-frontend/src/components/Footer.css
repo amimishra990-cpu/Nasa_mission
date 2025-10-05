@@ -1,9 +1,10 @@
 .footer {
   position: relative;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, #0B0C10 0%, #0B1523 100%);
+  border-top: 2px solid rgba(11, 61, 145, 0.3);
   margin-top: 120px;
   overflow: hidden;
+  box-shadow: 0 -10px 40px rgba(11, 61, 145, 0.1);
 }
 
 .footer-container {
@@ -48,9 +49,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 12px;
+  background: linear-gradient(135deg, var(--nasa-blue) 0%, var(--orbital-blue) 100%);
+  border-radius: 8px;
   overflow: hidden;
+  border: 1px solid rgba(102, 252, 241, 0.2);
+  box-shadow: 0 4px 15px rgba(11, 61, 145, 0.3);
 }
 
 .star-icon {
@@ -80,22 +83,24 @@
 }
 
 .logo-main {
-  font-size: 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: 1.4rem;
+  color: var(--nasa-white);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .logo-sub {
-  font-size: 0.9rem;
-  color: #8b5cf6;
-  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .footer-description {
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  color: var(--mission-gray);
+  line-height: 1.7;
   margin-bottom: 30px;
   font-size: 0.95rem;
 }
@@ -120,10 +125,11 @@
 }
 
 .social-link:hover {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--nasa-blue) 0%, var(--orbital-blue) 100%);
   color: white;
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 10px 25px rgba(11, 61, 145, 0.5);
+  border-color: var(--accent-cyan);
 }
 
 .footer-links {
@@ -138,14 +144,12 @@
 }
 
 .footer-title {
-  color: white;
+  color: var(--nasa-white);
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .footer-list {
@@ -169,7 +173,7 @@
 }
 
 .footer-link:hover {
-  color: white;
+  color: var(--accent-cyan);
   transform: translateX(5px);
 }
 
@@ -189,14 +193,12 @@
 }
 
 .newsletter-title {
-  color: white;
+  color: var(--nasa-white);
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .newsletter-description {

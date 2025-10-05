@@ -5,14 +5,14 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #0a0a0a;
-  color: #ffffff;
+  background: #0B0C10;
+  color: #E8E8E8;
   overflow-x: hidden;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 code {
@@ -20,22 +20,41 @@ code {
     monospace;
 }
 
+/* Professional NASA color palette */
+:root {
+  --nasa-blue: #0B3D91;
+  --nasa-red: #FC3D21;
+  --nasa-white: #FFFFFF;
+  --deep-space: #0B0C10;
+  --star-white: #E8E8E8;
+  --cosmic-blue: #1F2833;
+  --orbital-blue: #2E5090;
+  --accent-cyan: #66FCF1;
+  --accent-orange: #FF6B35;
+  --success-green: #45B649;
+  --mission-gray: #C5C6C7;
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+  --glass-light: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: var(--cosmic-blue);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4f46e5;
-  border-radius: 4px;
+  background: var(--nasa-blue);
+  border-radius: 5px;
+  border: 2px solid var(--cosmic-blue);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6366f1;
+  background: var(--orbital-blue);
 }
 
 /* Global animations */
@@ -109,12 +128,13 @@ code {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Gradient text */
+/* Gradient text - NASA style */
 .gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--nasa-blue) 0%, var(--orbital-blue) 50%, var(--accent-cyan) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 700;
 }
 
 .gradient-text-purple {
@@ -154,13 +174,18 @@ code {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--nasa-blue) 0%, var(--orbital-blue) 100%);
+  color: var(--nasa-white);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(11, 61, 145, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 10px 30px rgba(11, 61, 145, 0.5);
+  background: linear-gradient(135deg, var(--orbital-blue) 0%, var(--nasa-blue) 100%);
 }
 
 .btn-secondary {
@@ -176,28 +201,34 @@ code {
 
 .btn-outline {
   background: transparent;
-  color: #667eea;
-  border: 2px solid #667eea;
+  color: var(--nasa-blue);
+  border: 2px solid var(--nasa-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .btn-outline:hover {
-  background: #667eea;
-  color: white;
+  background: var(--nasa-blue);
+  color: var(--nasa-white);
+  box-shadow: 0 5px 20px rgba(11, 61, 145, 0.3);
 }
 
-/* Card styles */
+/* Card styles - Professional */
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-light);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
   padding: 24px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 20px var(--shadow-dark);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: rgba(102, 126, 234, 0.3);
+  border-color: var(--nasa-blue);
+  box-shadow: 0 8px 30px rgba(11, 61, 145, 0.3);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
